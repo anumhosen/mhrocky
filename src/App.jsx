@@ -1,17 +1,19 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import About from './pages/About';
-import Home from './pages/Home';
+import Publications from './pages/Publications';
+import EducationalBackground from './pages/EducationalBackground';
 
 function App() {
     return (
         <BrowserRouter>
-            <div className="flex w-full h-screen">
-                <Navbar />
+            <Navbar />
+            <div className="md:ml-[25%]">
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="*" element={<About />} />
                     <Route path="/about" element={<About />} />
+                    <Route path="/publications" element={<Publications />} />
+                    <Route path="/educational-background" element={<EducationalBackground />} />
                 </Routes>
             </div>
         </BrowserRouter>

@@ -2,54 +2,56 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
+const NavLinks = () => {
+    const links = [
+        { to: '/', label: 'About' },
+        { to: '/educational-background', label: 'Educational Background' },
+        { to: '/teaching-experience', label: 'Teaching Experience' },
+        { to: '/research-experience', label: 'Research Experience' },
+        { to: '/publications', label: 'Publications' },
+        { to: '/conferences', label: 'Conferences' },
+        { to: '/miscellaneous-experience', label: 'Miscellaneous Experience' },
+        { to: '/technical-skills', label: 'Technical Skills' },
+    ];
+    
+    return (
+        <>
+            <h1 className="text-3xl">Curriculum Vitae</h1>
+            {links.map((link, index) => (
+                <Link key={index} to={link.to} className="block mt-4 hover:text-blue-500 hover:translate-x-4 duration-300" onClick={() => setMenuOpen(false)}>
+                    {link.label}
+                </Link>
+            ))}
+        </>
+    );
+};
+
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <header className="bg-gray-800 w-[25%] h-full text-white">
+        <header>
+            {/* Mobile Menu Button */}
+            <button
+                className="absolute top-4 right-4 z-50 md:hidden text-2xl focus:outline-none text-white"
+                onClick={() => setMenuOpen(!menuOpen)}
+                aria-label="Toggle menu"
+            >
+                {menuOpen ? <FaTimes /> : <FaBars />}
+            </button>
             {/* Main Navigation */}
-            <nav>
-                {/* Logo Section */}
-                <Link to="/">
-                    <p>Mahabub Hasan Rocky</p>
-                </Link>
+            <nav className="fixed  md:w-[25%] w-full text-white">
+                <div className="px-4 py-8 hidden md:block bg-gray-800 h-screen">
+                    <NavLinks />
+                </div>
 
-                {/* Mobile Menu Button */}
-                <button
-                    className="md:hidden text-2xl focus:outline-none"
-                    onClick={() => setMenuOpen(!menuOpen)}
-                    aria-label="Toggle menu"
-                >
-                    {menuOpen ? <FaTimes /> : <FaBars />}
-                </button>
-
-                {/* Navigation Links */}
+                {/*Mobile Navigation Links */}
                 <div
-                    className={`transition-all duration-300 ease-in-out ${
+                    className={`p-8 bg-gray-800 h-screen transition-all duration-300 ease-in-out ${
                         menuOpen ? 'block' : 'hidden'
                     }`}
                 >
-                    <Link
-                        to="/"
-                        className={`block px-3 py-2 rounded-lg hover:bg-[#00A8CC] hover:text-teal-300 transition-colors`}
-                        onClick={() => setMenuOpen(false)}
-                    >
-                        Home
-                    </Link>
-                    <Link
-                        to="/contact"
-                        className={`block px-3 py-2 rounded-lg hover:bg-[#00A8CC] hover:text-teal-300 transition-colors`}
-                        onClick={() => setMenuOpen(false)}
-                    >
-                        Contact
-                    </Link>
-                    <Link
-                        to="/about"
-                        className={`block px-3 py-2 rounded-lg hover:bg-[#00A8CC] hover:text-teal-300 transition-colors`}
-                        onClick={() => setMenuOpen(false)}
-                    >
-                        About
-                    </Link>
+                    <NavLinks />
                 </div>
             </nav>
         </header>
