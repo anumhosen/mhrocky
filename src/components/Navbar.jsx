@@ -10,8 +10,9 @@ const NavLinks = () => {
         { to: '/research-experience', label: 'Research Experience' },
         { to: '/publications', label: 'Publications' },
         { to: '/conferences', label: 'Conferences' },
-        { to: '/miscellaneous-experience', label: 'Miscellaneous Experience' },
+        // { to: '/miscellaneous-experience', label: 'Miscellaneous Experience' },
         { to: '/technical-skills', label: 'Technical Skills' },
+        { to: '/references', label: 'References' },
     ];
     
     return (
@@ -41,13 +42,13 @@ const Navbar = () => {
             </button>
             {/* Main Navigation */}
             <nav className="fixed  md:w-[25%] w-full text-white">
-                <div className="px-4 py-8 hidden md:block bg-gray-800 h-screen">
+                <div className="px-4 lg:px-8 py-8 hidden md:block bg-[#081826] h-screen">
                     <NavLinks />
                 </div>
 
                 {/*Mobile Navigation Links */}
                 <div
-                    className={`p-8 bg-gray-800 h-screen transition-all duration-300 ease-in-out ${
+                    className={`p-8 bg-[#081826] h-screen transition-all duration-300 ease-in-out ${
                         menuOpen ? 'block' : 'hidden'
                     }`}
                 >
