@@ -46,7 +46,7 @@ const Publications = () => {
         },
     ];
     return (
-        <div className="sm:p-8">
+        <div className="md:ml-[25%] sm:p-8">
             <div className="text-4xl font-bold text-center py-16 bg-[#081826] text-white mb-4">
                 Publications
             </div>

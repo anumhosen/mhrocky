@@ -13,7 +13,7 @@ const About = () => {
         backgroundPosition: 'center',
     };
     return (
-        <div className="w-full">
+        <div className="md:ml-[25%]">
             <div
                 className="block sm:flex justify-between sm:px-16 py-16 text-white"
                 style={bgstyle}

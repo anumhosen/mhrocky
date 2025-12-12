@@ -96,7 +96,7 @@ const TechnicalSkills = () => {
         },
     ];
     return (
-        <div className="sm:p-8">
+        <div className="md:ml-[25%] sm:p-8">
             <div className="text-4xl font-bold text-center px-8 py-16 bg-[#081826] text-white mb-8">
                 Technical Skills
             </div>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const EducationalBackground = () => {
     return (
-        <div className='sm:p-8'>
+        <div className='md:ml-[25%] sm:p-8'>
             <div className="text-4xl font-bold text-center py-16 bg-[#081826] text-white mb-8">Educational Background</div>
             <div className='sm:w-[80%] mx-auto space-y-8 text-center sm:text-left'>
                 <div className="sm:flex items-center">
