@@ -46,16 +46,16 @@ const Publications = () => {
         },
     ];
     return (
-        <div className="md:ml-[25%] sm:p-8">
-            <div className="text-4xl font-bold text-center py-16 bg-[#081826] text-white mb-4">
+        <div className='md:ml-[25%] sm:p-8'>
+            <div className='text-4xl font-bold text-center py-16 bg-[#081826] text-white mb-4'>
                 Publications
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
                 {publications.map((pub, index) => (
-                    <Link to={pub.doi} target="_blank" key={index}>
-                        <div className="sm:border border-b border-gray-400 sm:rounded-xl p-4 sm:shadow-md shadow-gray-400">
-                            <img src={pub.img} className="max-h-60 mx-auto mb-8" />
-                            <h1 className="font-bold text-2xl">{pub.title}</h1>
+                    <Link to={pub.doi} target='_blank' key={index}>
+                        <div className='sm:border border-b border-gray-400 sm:rounded-xl p-4 sm:shadow-md shadow-gray-400'>
+                            <img src={pub.img} className='max-h-60 mx-auto mb-8' />
+                            <h1 className='font-bold text-2xl'>{pub.title}</h1>
                             <p>{pub.content}</p>
                         </div>
                     </Link>

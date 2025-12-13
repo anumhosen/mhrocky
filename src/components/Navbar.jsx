@@ -10,16 +10,20 @@ const NavLinks = () => {
         { to: '/research-experience', label: 'Research Experience' },
         { to: '/publications', label: 'Publications' },
         { to: '/conferences', label: 'Conferences' },
-        // { to: '/miscellaneous-experience', label: 'Miscellaneous Experience' },
         { to: '/technical-skills', label: 'Technical Skills' },
         { to: '/references', label: 'References' },
     ];
-    
+
     return (
         <>
-            <h1 className="text-3xl">Curriculum Vitae</h1>
+            <h1 className='text-3xl'>Curriculum Vitae</h1>
             {links.map((link, index) => (
-                <Link key={index} to={link.to} className="block mt-4 hover:text-blue-500 hover:translate-x-4 duration-300" onClick={() => setMenuOpen(false)}>
+                <Link
+                    key={index}
+                    to={link.to}
+                    className='block mt-4 hover:text-blue-500 hover:translate-x-4 duration-300'
+                    onClick={() => setMenuOpen(false)}
+                >
                     {link.label}
                 </Link>
             ))}
@@ -34,15 +38,15 @@ const Navbar = () => {
         <header>
             {/* Mobile Menu Button */}
             <button
-                className="absolute top-4 right-4 z-50 md:hidden text-2xl focus:outline-none text-white"
+                className='absolute top-4 right-4 z-50 md:hidden text-2xl focus:outline-none text-white'
                 onClick={() => setMenuOpen(!menuOpen)}
-                aria-label="Toggle menu"
+                aria-label='Toggle menu'
             >
                 {menuOpen ? <FaTimes /> : <FaBars />}
             </button>
             {/* Main Navigation */}
-            <nav className="fixed  md:w-[25%] w-full text-white">
-                <div className="px-4 lg:px-8 py-8 hidden md:block bg-[#081826] h-screen">
+            <nav className='fixed  md:w-[25%] w-full text-white'>
+                <div className='px-4 lg:px-8 py-8 hidden md:block bg-[#081826] h-screen'>
                     <NavLinks />
                 </div>
 
