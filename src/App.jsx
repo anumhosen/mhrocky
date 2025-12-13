@@ -8,6 +8,7 @@ import ResearchExperience from './pages/ResearchExperience';
 import Conferences from './pages/Conferences';
 import TechnicalSkills from './pages/TechnicalSkills';
 import References from './pages/References';
+import Contacts from './pages/Contacts';
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                 <Route path='/conferences' element={<Conferences />} />
                 <Route path='/technical-skills' element={<TechnicalSkills />} />
                 <Route path='/references' element={<References />} />
+                <Route path='/contacts' element={<Contacts />} />
             </Routes>
         </BrowserRouter>
     );

@@ -12,6 +12,7 @@ const NavLinks = () => {
         { to: '/conferences', label: 'Conferences' },
         { to: '/technical-skills', label: 'Technical Skills' },
         { to: '/references', label: 'References' },
+        { to: '/contacts', label: 'Contacts' },
     ];
 
     return (
@@ -21,7 +22,7 @@ const NavLinks = () => {
                 <Link
                     key={index}
                     to={link.to}
-                    className='block mt-4 hover:text-blue-500 hover:translate-x-4 duration-300'
+                    className='block mt-4 hover:text-blue-500 hover:translate-x-3 duration-300'
                     onClick={() => setMenuOpen(false)}
                 >
                     {link.label}
