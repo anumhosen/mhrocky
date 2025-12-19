@@ -30,7 +30,7 @@ const Publications = () => {
             <div className='grid grid-cols-1 gap-4'>
                 {publications.slice(1).map((pub, index) => (
                     <Link to={pub[0]} target='_blank' key={index}>
-                        <div className='sm:flex gap-4 sm:border border-b border-gray-400 sm:rounded-xl px-4 py-2 sm:shadow-md shadow-gray-400'>
+                        <div className='sm:flex gap-4 sm:border border-b border-gray-400 sm:rounded-xl p-4 sm:shadow-md shadow-gray-400'>
                             <img src={pub[3]} className='max-w-40 max-h-40 mx-auto mb-4 sm:mb-0' />
                             <div>
                                 <h1 className='font-bold text-xl text-justify'>{pub[1]}</h1>
