@@ -31,7 +31,7 @@ const EducationalBackground = () => {
                         <img
                             src={edu[3]}
                             alt='Institute Logo'
-                            className='w-26 h-24 sm:mr-8 sm:ml-0 mx-auto'
+                            className='max-w-28 sm:mr-8 sm:ml-0 mx-auto'
                         />
                         <div>
                             <p className='text-xl'>{edu[0]}</p>

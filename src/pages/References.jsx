@@ -9,7 +9,7 @@ const References = () => {
                     <img
                         src='https://phy.just.edu.bd/img/just.jpg'
                         alt='JUST'
-                        className='w-26 h-24 sm:mr-8 sm:ml-0 mx-auto'
+                        className='max-w-28 sm:mr-8 sm:ml-0 mx-auto'
                     />
                     <div>
                         <p className='text-xl'>Mohammad Tanvir Ahmed</p>

@@ -26,7 +26,7 @@ const Conferences = () => {
             <div className='sm:w-[80%] mx-auto space-y-8 text-center sm:text-left'>
                 {conferences.slice(1).map((con, index) => (
                     <div key={index} className='sm:flex items-center'>
-                        <img src={con[3]} alt={con[0]} className='w-26 h-24 sm:mr-8 mx-auto' />
+                        <img src={con[3]} alt={con[0]} className='max-w-30 sm:mr-8 mx-auto' />
                         <div>
                             <p className='text-xl font-semibold'>{con[0]}</p>
                             <p className='text-xl'>{con[1]}</p>
